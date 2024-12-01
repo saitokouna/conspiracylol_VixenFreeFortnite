@@ -309,7 +309,7 @@ bool EntryPoint()
         UEngine* GEngine = reinterpret_cast<UEngine*>(Gameinstance->GetOuterPrivate());
         if (!GEngine) return false;
 
-        MediumFont = GEngine->MediumFont();
+        MediumFont = Variables::Roboto; //GEngine->MediumFont();
         if (!MediumFont)
         {
             WindowsAPI::MessageBoxA(0, Encrypt("renderer threw while obtaining assets, game update?\r\n").decrypt(), 0, 0);
