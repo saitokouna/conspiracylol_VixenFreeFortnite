@@ -6709,7 +6709,7 @@ public:
 
 	AGameStateBase* GameState()
 	{
-		return *(AGameStateBase**)(this + 0x190);
+		return *(AGameStateBase**)(this + 0x188);
 	}
 
 	UGameInstance* OwningGameInstance()
