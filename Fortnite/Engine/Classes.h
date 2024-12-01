@@ -41,7 +41,7 @@ public:
 	{
 		if (auto VTable = *(void***)this)
 		{
-			reinterpret_cast<void(__cdecl*)(UObject*, UObject*, void*)>(VTable[23])(this, UFunction, Params);
+			reinterpret_cast<void(__cdecl*)(UObject*, UObject*, void*)>(VTable[66])(this, UFunction, Params);
 		}
 	}
 
@@ -65,7 +65,7 @@ public:
 	static UObject* StaticFindObject(UObject* Class, UObject* Outer, const wchar_t* Name, bool ExactClass)
 	{
 
-		static auto SFOPattern = Encrypt("48 89 5C 24 ? 55 56 57 43 54 41 55 43 56 43 57 48 8D AC 24 ? ? ? ? 48 81 EC ? ? ? ? 4A 8B 05 ? ? ? ? 48 33 C4 4A 89 85");
+		static auto SFOPattern = Encrypt("40 55 53 56 57 43 54 43 56 43 57 48 8D AC 24 ? ? ? ? 48 81 EC 90 04 00 00");
 
 		static void* (*StaticFindObject)(UObject * Class, UObject * InOuter, const wchar_t* Name, bool ExactClass) = nullptr;
 		if (!StaticFindObject)
