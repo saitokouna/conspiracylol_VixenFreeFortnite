@@ -584,7 +584,7 @@ namespace Framework
 			Wrapper::Line(FVector2D(this->Position.X + this->Size.X, this->Position.Y), FVector2D(this->Position.X + this->Size.X, this->Position.Y + 20), FromRGB(52, 63, 80), 1.f);
 			Wrapper::Line(FVector2D(this->Position.X, this->Position.Y + 20), FVector2D(this->Position.X + this->Size.X, this->Position.Y + 20), FromRGB(52, 63, 80), 1.f);
 
-			static auto Enc_WataMark = Encrypt(L"Vixen Free Internal - discord.gg/vixen - if you paid for this you were scammed");
+			static auto Enc_WataMark = Encrypt(L"Vixen Free - discord.gg/vixencommunity - t.me/vixencommunity");
 			static FString WaltaMark = FString(Enc_WataMark.decrypt()); // we need to cook ( i need to cook and need head fr)
 
 			Wrapper::Text(FString(WaltaMark), FVector2D(this->Position.X + (this->Size.X / 2.0), this->Position.Y + 10.0), FLinearColor(1.f, 1.f, 1.f, 1.f), 10.0, true, true);
